@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="script/app.js"></script>
+
+    <link rel="icon" href="img/smithsft.png" type="image/png" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style/loader.css" />
+    <link rel="stylesheet" href="style/skills.css" />
+    <link rel="stylesheet" href="style/projects.css" />
+    <link rel="stylesheet" href="style/contact.css" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/about.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Smith Sandoval | Desarrollador de Software</title>
+  </head>
+
+  <!-- Página de carga -->
+  <div class="loader">
+    <h1>
+      <span>Bienvenido</span>
+      <span>al</span>
+      <span>portafolio</span>
+      <span>de</span>
+      <span>...</span>
+    </h1>
+    <div class="hypnotic"></div>
+  </div>
+
+  <body>
+    <!-- NOTIFICACIONES DEL ENVIO DEL FORMULARIO -->
+    <div id="notification-container" style="display: none">
+      <div class="notification">
+        <i class="fa fa-check-circle"></i>
+        <p class="notification-message"></p>
+      </div>
+    </div>
+
+    <div id="main-content" style="display: none">
+      <!-- SECCIÓN DEL NAVBAR -->
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+          <a href="#" class="navbar-brand">Smith Sandoval</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav navbar-nav-center mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#inicio">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#sobreMi">Sobre mí</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#habilidades">Habilidades</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="#formacion">Formación</a>
+              </li> -->
+              <li class="nav-item">
+                <a class="nav-link" href="#proyectos">Proyectos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contacto">Contacto</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://www.linkedin.com/in/josue-smith-carrillo-sandoval/"
+                  target="_blank"
+                  ><i
+                    class="fab fa-linkedin"
+                    style="color: #ffffff; font-size: 24px"
+                  ></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://github.com/GuissepeS"
+                  target="_blank"
+                  ><i
+                    class="fab fa-github"
+                    style="color: #ffffff; font-size: 24px"
+                  ></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://wa.me/51918444190"
+                  target="_blank"
+                  ><i
+                    class="fab fa-whatsapp"
+                    style="color: #ffffff; font-size: 24px"
+                  ></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <!-- SECCIÓN DE INICIO -->
+      <section id="inicio">
+        <div class="bg-presentacion">
+          <div class="inicio-content">
+            <div class="inicio-text">
+              <h2>¡Hola! Soy</h2>
+              <h1>Josue Smith Carrillo Sandoval</h1>
+              <p>Desarrollador<span id="dynamic-text"></span></p>
+              <p>
+                Me apasiona construir soluciones tecnológicas que resuelvan
+                problemas reales, optimizando procesos y mejorando la
+                experiencia del usuario.
+              </p>
+              <div class="inicio-buttons">
+                <a
+                  href="https://drive.google.com/file/d/1fz1WnL6yoZrS7dqB0jFwC6vteXe2FcGx/view?usp=sharing"
+                  class="button"
+                  target="_blank"
+                  style="text-decoration: none"
+                >
+                  <span>Descargar CV</span>
+                </a>
+                <a
+                  href="#contacto"
+                  class="button"
+                  style="text-decoration: none"
+                >
+                  <span>Contacto</span>
+                </a>
+              </div>
+            </div>
+            <div class="inicio-image">
+              <img src="img/descarga.png" alt="Ilustración de perfil" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN SOBRE MI -->
+      <section id="sobreMi">
+        <div class="about-section">
+          <div class="container">
+            <h1 class="about-title">Sobre mí</h1>
+
+            <div class="about-content">
+              <div class="about-image">
+                <img
+                  src="img/developer.png"
+                  alt="Ilustración de desarrollador"
+                />
+              </div>
+
+              <div class="about-text">
+                <p>
+                  Soy egresado de la carrera de Desarrollo de Sistemas de
+                  Información y estudiante autodidacta de Desarrollo Web
+                  enfocado en programación Full Stack.
+                </p>
+
+                <p>
+                  Aspiro conseguir empleo en el mundo del Desarrollo de
+                  Software, adquirir experiencia, nuevos conocimientos y
+                  fortalecer mi vida profesional.
+                </p>
+
+                <p>
+                  Soy una persona empática y entusiasta, con competencias
+                  enfocadas en el trabajo en equipo, comunicación asertiva,
+                  resolución de problemas, responsable y proactiva, me gusta
+                  aprender de los demás y superarme continuamente.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN DE LAS HABILIDADES -->
+      <section id="habilidades">
+        <div class="skills-section">
+          <div class="container">
+            <h1 class="skills-title">Habilidades</h1>
+
+            <div class="skills-grid">
+              <!-- HTML -->
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <img src="img/html5.png" alt="HTML 5" />
+                </div>
+                <h3>HTML 5</h3>
+              </div>
+
+              <!-- CSS -->
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <img src="img/css.png" alt="CSS 3" />
+                </div>
+                <h3>CSS</h3>
+              </div>
+
+              <!-- JavaScript -->
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <img src="img/js.png" alt="JavaScript" />
+                </div>
+                <h3>JavaScript</h3>
+              </div>
+
+              <!-- Flutter -->
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <img src="img/flutter.png" alt="Flutter" />
+                </div>
+                <h3>Flutter</h3>
+              </div>
+
+              <!-- Laravel -->
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <img src="img/Laravel.png" alt="Laravel" />
+                </div>
+                <h3>Laravel</h3>
+              </div>
+
+              <!-- Git -->
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <img src="img/git.png" alt="Git" />
+                </div>
+                <h3>Git</h3>
+              </div>
+
+              <!-- GitHub -->
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <img src="img/github.png" alt="Github" />
+                </div>
+                <h3>Github</h3>
+              </div>
+
+              <!-- MySql -->
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <img src="img/sql.png" alt="MySql" />
+                </div>
+                <h3>MySql</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN DE PROYECTOS -->
+      <section id="proyectos">
+        <div class="projects-section">
+          <div class="container">
+            <h1 class="section-title">Presentación de proyectos</h1>
+            <p class="section-description">
+              Explora mi trayectoria a través de proyectos frontend, backend y
+              base de datos. Cada sección representa un hito en mi camino de
+              aprendizaje continuo.
+            </p>
+
+            <!-- Tabs de navegación -->
+            <ul
+              class="nav nav-tabs project-tabs"
+              id="projectTabs"
+              role="tablist"
+            >
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  id="frontend-tab"
+                  data-toggle="tab"
+                  href="#frontend"
+                  role="tab"
+                  aria-controls="frontend"
+                  aria-selected="true"
+                >
+                  <i class="fa fa-code"></i>
+                  Frontend
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="backend-tab"
+                  data-toggle="tab"
+                  href="#backend"
+                  role="tab"
+                  aria-controls="backend"
+                  aria-selected="false"
+                >
+                  <i class="fa fa-server"></i>
+                  Backend
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="database-tab"
+                  data-toggle="tab"
+                  href="#database"
+                  role="tab"
+                  aria-controls="database"
+                  aria-selected="false"
+                >
+                  <i class="fa fa-database"></i>
+                  Base de Datos
+                </a>
+              </li>
+            </ul>
+
+            <!-- Contenido de las tabs -->
+            <div class="tab-content" id="projectTabsContent">
+              <!-- Frontend Projects -->
+              <div
+                class="tab-pane fade show active"
+                id="frontend"
+                role="tabpanel"
+              >
+                <div class="projects-grid">
+                  <!-- Project Card 1 -->
+                  <div class="project-card">
+                    <div class="project-image">
+                      <img src="img/aritmatika.jpg" alt="Aritmatika Solver" />
+                    </div>
+                    <div class="project-info">
+                      <h3>Aritmatika Solver</h3>
+                      <p>
+                        Program ini dirancang untuk mempermudah pengguna dalam
+                        menyelesaikan soal-soal matematika
+                      </p>
+                      <div class="project-links">
+                        <a href="#" class="demo-link"
+                          >Live Demo <i class="fa fa-external-link"></i
+                        ></a>
+                        <a href="#" class="details-link"
+                          >Details <i class="fa fa-arrow-right"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Agrega más project cards aquí -->
+                </div>
+              </div>
+
+              <!-- Backend Projects -->
+              <div class="tab-pane fade" id="backend" role="tabpanel">
+                <div class="projects-grid">
+                  <!-- Project Card 1 -->
+                  <div class="project-card">
+                    <div class="project-image">
+                      <img src="img/autochat.jpg" alt="AutoChat-Discord" />
+                    </div>
+                    <div class="project-info">
+                      <h3>AutoChat-Discord</h3>
+                      <p>
+                        AutoChat es una solución de automatización para enviar
+                        mensajes a canales de Discord
+                      </p>
+                      <div class="project-links">
+                        <a href="#" class="demo-link"
+                          >Live Demo <i class="fa fa-external-link"></i
+                        ></a>
+                        <a href="#" class="details-link"
+                          >Details <i class="fa fa-arrow-right"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Agrega más project cards aquí -->
+                </div>
+              </div>
+
+              <!-- Database Projects -->
+              <div class="tab-pane fade" id="database" role="tabpanel">
+                <div class="projects-grid">
+                  <!-- Project Card 1 -->
+                  <div class="project-card">
+                    <div class="project-image">
+                      <img src="img/buku-catatan.jpg" alt="Buku Catatan" />
+                    </div>
+                    <div class="project-info">
+                      <h3>Buku Catatan</h3>
+                      <p>
+                        Buku Catatan es un sitio web que permite a los usuarios
+                        crear y gestionar notas
+                      </p>
+                      <div class="project-links">
+                        <a href="#" class="demo-link"
+                          >Live Demo <i class="fa fa-external-link"></i
+                        ></a>
+                        <a href="#" class="details-link"
+                          >Details <i class="fa fa-arrow-right"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Agrega más project cards aquí -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN DE CONTACTO -->
+      <section id="contacto">
+        <div class="container">
+          <h1 class="contact-title">Contáctame</h1>
+          <p class="contact-subtitle">
+            ¿Tienes alguna pregunta? Envíame un mensaje y te responderé pronto.
+          </p>
+
+          <div class="contact-container">
+            <div class="contact-main">
+              <!-- Formulario de contacto directo -->
+              <div class="contact-form">
+                <h2>Contáctenos</h2>
+                <p>¿Tienes algo que comentar? Envíame un mensaje y hablemos.</p>
+
+                <form id="messageForm">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      id="name"
+                      placeholder="Su nombre"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      id="email"
+                      placeholder="Tu correo electrónico"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <textarea
+                      id="message"
+                      placeholder="Tu mensaje"
+                      required
+                    ></textarea>
+                  </div>
+                  <button type="submit" class="send-message-btn">
+                    <i class="fa fa-paper-plane"></i> Enviar mensaje
+                  </button>
+                </form>
+              </div>
+
+              <!-- Sección de redes sociales -->
+              <div class="social-connect-section">
+                <h2>Conéctate conmigo</h2>
+                <div class="social-links">
+                  <a
+                    href="https://www.linkedin.com/in/josue-smith-carrillo-sandoval/"
+                    class="social-btn linkedin full-width"
+                    target="_blank"
+                  >
+                    <i class="fab fa-linkedin"></i>
+                    <div class="social-text">
+                      <span>Vamos a conectarnos</span>
+                      <small>en LinkedIn</small>
+                    </div>
+                  </a>
+                  <div class="social-row">
+                    <a
+                      href="https://www.instagram.com/_anima_boys/"
+                      class="social-btn instagram"
+                      target="_blank"
+                    >
+                      <i class="fab fa-instagram"></i>
+                      <div class="social-text">
+                        <span>Instagram</span>
+                        <small>@_anima_boys</small>
+                      </div>
+                    </a>
+                    <a
+                      href="https://www.youtube.com/@almacod"
+                      class="social-btn youtube"
+                      target="_blank"
+                    >
+                      <i class="fab fa-youtube"></i>
+                      <div class="social-text">
+                        <span>YouTube</span>
+                        <small>@almacod</small>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="social-row">
+                    <a
+                      href="https://github.com/GuissepeS"
+                      class="social-btn github"
+                      target="_blank"
+                    >
+                      <i class="fab fa-github"></i>
+                      <div class="social-text">
+                        <span>Github</span>
+                        <small>@GuissepeS</small>
+                      </div>
+                    </a>
+                    <a
+                      href="https://www.tiktok.com/@alma_cod"
+                      class="social-btn tiktok"
+                      target="_blank"
+                    >
+                      <i class="fab fa-tiktok"></i>
+                      <div class="social-text">
+                        <span>TikTok</span>
+                        <small>@alma_cod</small>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sección de comentarios -->
+            <div class="comments-section">
+              <h2>Comentarios ( <span id="comment-count">0</span> )</h2>
+
+              <form id="commentForm">
+                <div class="form-group">
+                  <label>Nombre <span class="required">*</span></label>
+                  <input
+                    type="text"
+                    id="commentName"
+                    placeholder="Introduce tu nombre"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Mensaje <span class="required">*</span></label>
+                  <textarea
+                    id="commentMessage"
+                    placeholder="Escribe tu mensaje aquí..."
+                    required
+                  ></textarea>
+                </div>
+                <div class="form-group">
+                  <label>Foto de perfil (opcional)</label>
+                  <div class="profile-upload">
+                    <button type="button" id="uploadBtn">
+                      <i class="fa fa-image"></i> Elige una foto de perfil
+                    </button>
+                    <small>Tamaño máximo de archivo: 5 MB</small>
+                  </div>
+                </div>
+                <button type="submit" class="publish-comment-btn">
+                  <i class="fa fa-send"></i> Publicar comentario
+                </button>
+              </form>
+
+              <!-- Lista de comentarios -->
+              <div id="comments-list" class="comments-list">
+                <!-- Los comentarios se agregarán aquí dinámicamente -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-text">
+              <p>&copy; 2024 Smith Sandoval. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-social">
+              <a
+                href="https://www.linkedin.com/in/josue-smith-carrillo-sandoval/"
+                target="_blank"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/GuissepeS" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://wa.me/51918444190" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- SCRIPT PARA EL ENVIO DEL FORMULARIO AL CORREO -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("8q5-7p7kzVFRKKjp2");
+      })();
+    </script>
+  </body>
+</html>

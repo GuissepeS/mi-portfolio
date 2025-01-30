@@ -1,0 +1,348 @@
+/* Estilos para las notificaciones */
+#notification-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999; /* Aumentamos el z-index para que esté por encima de todo */
+}
+
+.notification {
+  background: linear-gradient(135deg, #34d399, #059669);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  animation: slideIn 0.5s ease-out;
+  position: relative; /* Aseguramos que mantenga su posición */
+  z-index: 9999; /* También aumentamos el z-index del elemento notification */
+}
+
+.notification.error {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.notification i {
+  font-size: 1.5rem;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* ESTILO PARA    C O N T A C T O */
+#contacto {
+  padding-top: 100px;
+  background: linear-gradient(
+    135deg,
+    #0a1f1c,
+    #1a3b35,
+    #0f2f2a,
+    #1a3b35,
+    #0a1f1c
+  );
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  padding: 2rem 0;
+  color: white;
+}
+
+.contact-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-title {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  position: relative; /* Asegura que el título esté por encima del fondo */
+  z-index: 1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.contact-subtitle {
+  text-align: center;
+  color: #e0e0e0;
+  margin-bottom: 2rem;
+}
+
+/* Estilos del formulario de contacto */
+.contact-form,
+.comments-section {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Mejorar visibilidad de los botones */
+.send-message-btn,
+.publish-comment-btn {
+  background: linear-gradient(135deg, #34d399, #059669);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.send-message-btn:hover,
+.publish-comment-btn:hover {
+  background: linear-gradient(135deg, #059669, #047857);
+  transform: translateY(-2px);
+}
+
+/* Estilos de los botones sociales */
+.social-connect-section {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.social-connect-section h2 {
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.social-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  color: white !important; /* Forzar color blanco */
+  text-decoration: none !important; /* Quitar subrayado */
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.social-btn:hover {
+  color: white !important; /* Mantener color blanco en hover */
+  text-decoration: none !important; /* Mantener sin subrayado en hover */
+}
+
+.social-btn.full-width {
+  width: 100%;
+}
+
+.social-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+
+.social-text span {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.social-text small {
+  opacity: 0.8;
+}
+
+/* Efectos hover con gradientes */
+.social-btn.linkedin:hover {
+  background: linear-gradient(135deg, #0077b5, #00a0dc);
+  transform: translateY(-3px);
+}
+
+.social-btn.instagram:hover {
+  background: linear-gradient(
+    45deg,
+    #f09433,
+    #e6683c,
+    #dc2743,
+    #cc2366,
+    #bc1888
+  );
+  transform: translateY(-3px);
+}
+
+.social-btn.youtube:hover {
+  background: linear-gradient(135deg, #ff0000, #cc0000);
+  transform: translateY(-3px);
+}
+
+.social-btn.github:hover {
+  background: linear-gradient(135deg, #2b2b2b, #3b3b3b);
+  transform: translateY(-3px);
+}
+
+.social-btn.tiktok:hover {
+  background: linear-gradient(135deg, #00f2ea, #ff0050);
+  transform: translateY(-3px);
+}
+
+/* Iconos más grandes */
+.social-btn i {
+  font-size: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-main {
+    order: 1;
+  }
+
+  .comments-section {
+    order: 2;
+  }
+
+  .social-btn {
+    padding: 0.8rem 1rem;
+  }
+}
+
+/* Estilos de la sección de comentarios */
+.comments-list {
+  max-height: 350px;
+  overflow-y: auto;
+  margin-top: 2rem;
+  padding-right: 1rem;
+}
+/* Estilizar la barra de desplazamiento */
+.comments-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.comments-list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.comments-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.comment-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.required {
+  color: #ef4444;
+}
+
+.comment-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.comment-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.comment-content {
+  flex: 1;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.comment-time {
+  color: #b0b0b0;
+}
+
+/* Actualizar el estilo del botón de subir foto */
+#uploadBtn {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#uploadBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .social-row {
+    grid-template-columns: 1fr;
+  }
+}

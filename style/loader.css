@@ -1,0 +1,147 @@
+/* Estilos para la página de carga */
+.loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Asegúrate de que ocupe toda la altura */
+  width: 100%;
+  background: linear-gradient(135deg, #1a2b3c, #2c3e50, #34495e, #2c3e50, #1a2b3c);
+  color: white; /* Color del texto */
+  overflow: hidden; /* Para ocultar el texto que se sale */
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.hypnotic {
+  width: 67.2px;
+  height: 28px;
+  border: 2.2px solid #ffffff;
+  border-radius: 50%;
+  display: grid;
+  animation: hypnotic-ds34hk 2s infinite linear;
+  margin-top: 50px; /* Ajusta el espacio entre el h1 y el hypnotic */
+}
+
+.hypnotic:before,
+.hypnotic:after {
+  content: "";
+  grid-area: 1/1;
+  border: inherit;
+  border-radius: 50%;
+  animation: inherit;
+  animation-duration: 3s;
+}
+
+.hypnotic:after {
+  --s: -1;
+}
+
+@keyframes hypnotic-ds34hk {
+  100% {
+    transform: rotate(calc(var(--s, 1) * 1turn));
+  }
+}
+
+/* Cambia la fuente a una más gruesa */
+.loader h1 {
+  font-size: 2.5rem; /* Ajusta el tamaño según sea necesario */
+  text-align: center;
+  margin-bottom: 2rem;
+  width: 100%;
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  transform: translateX(-100%); /* Comienza fuera de la pantalla */
+  animation: slide-in 2s forwards; /* Animación de entrada */
+}
+
+/* Animación de entrada */
+@keyframes slide-in {
+  0% {
+    transform: translateX(
+      -100%
+    ); /* Comienza fuera de la pantalla a la izquierda */
+  }
+  100% {
+    transform: translateX(0); /* Termina en su posición original */
+  }
+}
+
+/* Animación de salida */
+@keyframes slide-out {
+  0% {
+    transform: translateX(0); /* Comienza en su posición original */
+  }
+  100% {
+    transform: translateX(
+      100%
+    ); /* Se mueve fuera de la pantalla a la derecha */
+  }
+}
+
+/* Aplicar la animación de salida a cada letra */
+.loader h1 span {
+  display: inline-block; /* Para aplicar la animación a cada letra */
+  opacity: 0; /* Comienza invisible */
+  transition: opacity 0.5s; /* Transición suave para la opacidad */
+  margin: 0 5px;
+  white-space: normal; /* Permitir saltos de línea */
+}
+
+/* Animación de salida para cada letra */
+.loader h1 span.out {
+  animation: slide-out 0.5s forwards; /* Animación de salida */
+}
+
+/* Animación de entrada */
+@keyframes fade-in {
+  0% {
+    opacity: 0; /* Comienza invisible */
+    transform: translateX(-20px); /* Comienza un poco a la izquierda */
+  }
+  100% {
+    opacity: 1; /* Termina visible */
+    transform: translateX(0); /* Termina en su posición original */
+  }
+}
+
+/* Animación de salida */
+@keyframes fade-out {
+  0% {
+    opacity: 1; /* Comienza visible */
+  }
+  100% {
+    opacity: 0; /* Termina invisible */
+  }
+}
+
+/* Aplicar la animación de salida a cada palabra */
+.loader h1 span.out {
+  animation: fade-out 0.5s forwards; /* Animación de salida */
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  .loader h1 {
+    font-size: 2rem;
+  }
+  
+  .loader h1 span {
+    display: inline-block;
+    margin: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .loader h1 {
+    font-size: 1.5rem;
+  }
+  
+  .hypnotic {
+    width: 50px;
+    height: 21px;
+    border-width: 2px;
+  }
+}
